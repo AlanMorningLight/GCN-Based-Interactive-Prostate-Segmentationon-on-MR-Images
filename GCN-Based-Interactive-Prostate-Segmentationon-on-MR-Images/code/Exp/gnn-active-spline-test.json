@@ -1,0 +1,71 @@
+{
+    "exp_dir": "",
+    "decoder":"gcn",
+    "encoder":"resnet",
+    "lr": 3e-4,
+    "lr_decay": 5,
+    "weight_decay": 1e-5,
+    "grad_clip": 40,
+    "max_epochs": 3000,
+    "print_freq": 20,
+    "val_freq": 500,
+    "fp_weight": 200,
+    "dt_threshold": 2,
+    "state_dim":128,
+    "n_adj":4,
+    "cp_num":40,
+    "p_num":1280,
+    "debug":false,
+    "regions":[64, 64, 64, 64],
+    "cnn_feature_grids":[112, 56, 28, 28],
+    "coarse_to_fine_steps":5,
+    "edge_loss":true,
+    "edge_annotation":true,
+    "diff_render_edge_loss":false,
+    "multi_step_loss_weights":[0.0, 0.0, 1],
+    "normal_loss_weight":0.00,
+    "loss_type":"L1",
+    "diff_iou_dim":224,
+    "spline_alpha":0.5,
+    "get_point_annotation":false,
+    "ext_points":false,
+    "ext_points_pert":0,
+    "n_classes":64,
+    "iou_filter":0.01,
+    "diff_render_use_spline":false,
+    "encoder_reload": "/home/lxj/.torch/models/MS_DeepLab_resnet_pretained_VOC.pth",
+    "dataset": {
+        "train" : {
+            "data_dir": ".../prostate142data/label",
+            "batch_size":  8,
+            "num_workers": 8,
+            "min_poly_len": 3,
+            "min_area": 100,
+            "sub_th": 0,
+            "img_side": 224,
+            "grid_side": 28,
+            "skip_multicomponent": true,
+            "get_point_annotation":false,
+            "random_context": [0.1, 0.2],
+            "class_filter": [
+                "prostate"
+            ]
+        },
+        "train_val" : {
+            "data_dir": ".../prostate142data/label",
+            "batch_size": 8,
+            "num_workers": 8,
+            "min_poly_len": 3,
+            "min_area": 100,
+            "sub_th": 0,
+            "img_side": 224,
+            "grid_side": 28,
+            "skip_multicomponent": true,
+            "get_point_annotation":false,
+            "random_context": [0.15,0.15],
+            "class_filter": [
+                "prostate"
+            ]
+        }
+    }
+}
