@@ -2,8 +2,7 @@
 PyTorch code for Graph convolutional network based interactive prostate segmentation on MR images 
 
 ## Note
-The trained interactive model file epoch34_step14314.pth and pretrained [model file](https://drive.google.com/drive/my-drive?ths=true) MS_DeepLab_resnet_pretained_VOC.pth can be download.
-
+The pretrained [model file](https://drive.google.com/drive/my-drive?ths=true) MS_DeepLab_resnet_pretained_VOC.pth can be download.
 
 ## Segmentation Result
 <img src = "GCN-Based-Interactive-Prostate-Segmentationon-on-MR-Images/doc/segmentation result.PNG" width="56%"/>
