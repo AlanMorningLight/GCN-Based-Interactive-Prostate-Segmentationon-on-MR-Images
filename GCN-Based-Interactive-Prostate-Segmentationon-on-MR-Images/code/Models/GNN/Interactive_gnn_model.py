@@ -9,7 +9,7 @@ import sys
 sys.path.append('')
 from ActiveSpline import ActiveSplineTorch
 from Evaluation import losses
-from poly_gnn import Model
+from GNN_model import Model
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 

@@ -13,7 +13,7 @@ import time
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-class GNN_model(nn.Module):
+class Model(nn.Module):
     def __init__(self,
                  state_dim=256,
                  n_adj=6,
@@ -22,7 +22,7 @@ class GNN_model(nn.Module):
                  get_point_annotation=False
                  ):
 
-        super(GNN_model, self).__init__()
+        super(Model, self).__init__()
 
         self.state_dim = state_dim
         self.n_adj = n_adj
